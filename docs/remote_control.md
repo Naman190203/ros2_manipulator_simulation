@@ -27,6 +27,15 @@ The simulation PC is the only machine that needs to run the bridge. A visible to
   ```ini
   [wsl2]
   networkingMode=mirrored
+  dnsTunneling=true
+  firewall=true
+  autoProxy=true
+  guiApplications=true
+
+  [experimental]
+  # Explicitly bind mirrored networking to your Wi-Fi adapter name
+  hostedNetworking=true
+
   ```
 
   After changing `.wslconfig`, restart WSL from PowerShell with `wsl --shutdown`.
